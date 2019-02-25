@@ -1,0 +1,15 @@
+deploy:
+  before:
+  - storage-app
+
+storageApp:
+  path: .
+  runtime:
+    storage:
+      chmod:  '0777'
+  public:
+    storage:
+      source:
+        chmod: '0777'
+      index.php:
+        template: storage-app/index.twig
