@@ -1,22 +1,22 @@
 {
-  "name": "codexten/app-storage",
-  "description": "Eii storage",
+  "name": "codexten/yii-app-storage",
+  "description": "storage app yii 2.0 or higher",
   "type": "library",
   "require": {
     "trntv/yii2-file-kit": "@stable",
     "mihaildev/yii2-elfinder": "1.3.0",
-    "entero/entero-core": "2.0.*"
+    "codexten/yii-core": "~2.0"
   },
   "autoload": {
     "psr-4": {
-      "entero\\storage\\": "src"
+      "codexten\\yii\\storage\\": "src"
     }
   },
   "extra": {
     "branch-alias": {
       "dev-master": "2.0.x-dev"
     },
-    "config-plugin": {
+    "sconfig-plugin": {
       "hidev": "src/hidev/config.php",
       "core": "src/config/core.php",
       "storage": [
