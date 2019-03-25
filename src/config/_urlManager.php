@@ -14,5 +14,4 @@ return [
     'rules' => [
         ['pattern' => 'cache/<path:(.*)>', 'route' => 'glide/index', 'encodeParams' => false],
     ],
-
 ];
