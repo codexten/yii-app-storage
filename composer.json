@@ -19,10 +19,11 @@
     },
     "config-plugin": {
       "hidev": "src/hidev/config.php",
-      "core": "src/config/core.php",
+      "params": "config/params.php",
+      "core": "config/core.php",
       "storage": [
         "$core",
-        "src/config/storage.php"
+        "config/storage.php"
       ]
     }
   }

@@ -6,9 +6,11 @@
  * Time: 3:30 PM
  */
 
+/* @var $params array */
+
 return [
     'aliases' => [
-        '@storageUrl' => $_ENV['STORAGE_URL'],
+        '@storageUrl' => $params['app.storage.url'],
         '@storage' => '@root/public/storage',
     ],
     'components' => [
