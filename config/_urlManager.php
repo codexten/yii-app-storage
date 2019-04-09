@@ -7,7 +7,7 @@
  */
 
 return [
-    'class' => 'yii\web\UrlManager',
+    'class' => \codexten\yii\storage\web\UrlManager::class,
     'baseUrl' => '@storageUrl',
     'enablePrettyUrl' => true,
     'showScriptName' => false,
