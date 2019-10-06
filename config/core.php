@@ -14,19 +14,32 @@ return [
         '@storage' => '@root/public/storage',
     ],
     'components' => [
+        'fs' => [
+            'class' => 'creocoder\flysystem\LocalFilesystem',
+            'path' => '@storage/source',
+        ],
+        'awss3Fs' => [
+            'class' => 'creocoder\flysystem\AwsS3Filesystem',
+            'key' => 'your-key',
+            'secret' => 'your-secret',
+            'bucket' => 'your-bucket',
+            'region' => 'your-region',
+            // 'version' => 'latest',
+            // 'baseUrl' => 'your-base-url',
+            // 'prefix' => 'your-prefix',
+            // 'options' => [],
+            // 'endpoint' => 'http://my-custom-url'
+        ],
         'fileStorage' => [
             'class' => '\trntv\filekit\Storage',
             'baseUrl' => '@storageUrl/source',
-            'filesystem' => [
-                'class' => 'codexten\yii\storage\components\LocalFilesystemBuilder',
-                'path' => '@storage/source',
-            ],
+            'filesystemComponent' => 'fs',
             'as log' => [
                 'class' => 'codexten\yii\storage\behaviors\FileStorageLogBehavior',
                 'component' => 'fileStorage',
             ],
         ],
-        'urlManagerStorage' => require(__DIR__ . '/_urlManager.php'),
+        'urlManagerStorage' => require(__DIR__.'/_urlManager.php'),
         'glide' => [
             'class' => 'trntv\glide\components\Glide',
             'sourcePath' => '@root/public/storage/source',
