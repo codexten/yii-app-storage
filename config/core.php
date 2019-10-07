@@ -25,9 +25,10 @@ return [
             'bucket' => $params['fsAwsS3.bucket'],
             'region' => $params['fsAwsS3.region'],
             'endpoint' => $params['fsAwsS3.endpoint'],
+            'prefix' => 'source',
+            'baseUrl' => '@storageUrl/source',
+
             // 'version' => 'latest',
-            // 'baseUrl' => 'your-base-url',
-            // 'prefix' => 'your-prefix',
             // 'options' => [],
         ],
         'fileStorage' => [
