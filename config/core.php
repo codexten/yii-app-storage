@@ -18,12 +18,12 @@ return [
             'class' => 'creocoder\flysystem\LocalFilesystem',
             'path' => '@storage/source',
         ],
-        'fsAWS' => [
+        'fsAwsS3' => [
             'class' => 'creocoder\flysystem\AwsS3Filesystem',
-            'key' => $params['fsAWS.key'],
-            'secret' => $params['fsAWS.secret'],
-            'bucket' => $params['fsAWS.bucket'],
-            'region' => $params['fsAWS.region'],
+            'key' => $params['fsAwsS3.key'],
+            'secret' => $params['fsAwsS3.secret'],
+            'bucket' => $params['fsAwsS3.bucket'],
+            'region' => $params['fsAwsS3.region'],
             // 'version' => 'latest',
             // 'baseUrl' => 'your-base-url',
             // 'prefix' => 'your-prefix',
