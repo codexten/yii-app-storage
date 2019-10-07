@@ -14,11 +14,11 @@ return [
         '@storage' => '@root/public/storage',
     ],
     'components' => [
-        'fs' => [
+        'fsLocal' => [
             'class' => 'creocoder\flysystem\LocalFilesystem',
             'path' => '@storage/source',
         ],
-        'awss3Fs' => [
+        'fsAWS' => [
             'class' => 'creocoder\flysystem\AwsS3Filesystem',
             'key' => 'your-key',
             'secret' => 'your-secret',
@@ -33,7 +33,7 @@ return [
         'fileStorage' => [
             'class' => '\trntv\filekit\Storage',
             'baseUrl' => '@storageUrl/source',
-            'filesystemComponent' => 'fs',
+            'filesystemComponent' => $params['fileStorage.filesystemComponent'],
             'as log' => [
                 'class' => 'codexten\yii\storage\behaviors\FileStorageLogBehavior',
                 'component' => 'fileStorage',
