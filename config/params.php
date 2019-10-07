@@ -5,8 +5,9 @@ return [
 
     'fileStorage.filesystemComponent' => 'fsLocal',
 
-    'fsAWS.key' => '',
-    'fsAWS.secret' => '',
-    'fsAWS.bucket' => '',
-    'fsAWS.region' => '',
+    'fsAwsS3.key' => '',
+    'fsAwsS3.secret' => '',
+    'fsAwsS3.bucket' => '',
+    'fsAwsS3.region' => '',
+    'fsAwsS3.endpoint' => '',
 ];

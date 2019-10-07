@@ -24,11 +24,11 @@ return [
             'secret' => $params['fsAwsS3.secret'],
             'bucket' => $params['fsAwsS3.bucket'],
             'region' => $params['fsAwsS3.region'],
+            'endpoint' => $params['fsAwsS3.endpoint'],
             // 'version' => 'latest',
             // 'baseUrl' => 'your-base-url',
             // 'prefix' => 'your-prefix',
             // 'options' => [],
-            // 'endpoint' => 'http://my-custom-url'
         ],
         'fileStorage' => [
             'class' => '\trntv\filekit\Storage',
