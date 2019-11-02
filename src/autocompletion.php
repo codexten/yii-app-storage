@@ -1,14 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: jomon
- * Date: 22/11/18
- * Time: 11:59 AM
- */
+
+use trntv\filekit\Storage;
+use trntv\glide\components\Glide;
+use yii\web\UrlManager;
 
 /**
- * @property \yii\web\UrlManager $urlManagerStorage
- * @property \trntv\glide\components\Glide $glide
+ * @property UrlManager $urlManagerStorage
+ * @property Glide $glide
+ * @property Storage $fileStorage
  */
 abstract class BaseApplication extends yii\base\Application
 {
